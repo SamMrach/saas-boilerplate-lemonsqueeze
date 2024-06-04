@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { getServerSession } from "next-auth";
 import { authOptions } from "./utils/auth";
 import LogoutButton from "@/components/shared/LogoutButton";
+import ActivatePlanButton from "@/components/shared/ActivatePlanButton";
 export default async function Home() {
   const session = await getServerSession(authOptions);
   return (
@@ -11,6 +12,7 @@ export default async function Home() {
       {session ? (
         <>
           <h1>You are logged in</h1>
+          <ActivatePlanButton/>
           <LogoutButton />
         </>
       ) : (
