@@ -18,19 +18,16 @@ const AuthRoot = async () => {
     return redirect("/");
   }
   return (
-    <div className="w-screen h-screen flex items-center justify-center">
-      <Card>
+    <div className="w-screen h-screen flex items-center justify-center bg-[#ececec]">
+      <Card className="w-1/4">
         <CardHeader>
           <CardTitle>Please sign in</CardTitle>
-          <CardDescription>
-            To access the private page you have to authenticated
-          </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="flex flex-col">
-            <SignInForm />
-
             <SigninWithGithub />
+            <hr className="h-px bg-gray-200 my-5"/>
+            <SignInForm />
           </div>
         </CardContent>
       </Card>

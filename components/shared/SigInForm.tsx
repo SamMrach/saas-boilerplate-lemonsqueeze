@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/components/ui/use-toast";
 import { signIn } from "next-auth/react";
+import { redirect } from "next/navigation";
 import { useState } from "react";
 
 export default function SignInForm() {
@@ -26,11 +27,11 @@ export default function SignInForm() {
         variant: "destructive",
       });
     }
-    setLoading(false);
-    return toast({
-      title: "Check your email",
-      description: "A magic link has been sent to you",
-    });
+    redirect('/auth/verify-request');
+    // return toast({
+    //   title: "Check your email",
+    //   description: "A magic link has been sent to you",
+    // });
   }
   return (
     <form action={SignInWithEmail}>
