@@ -1,5 +1,6 @@
 import Navbar from '@/components/shared/Navbar';
 import React,{ ReactNode }  from 'react'
+import Footer from './Footer';
  
 export default function Layout({
   children,
@@ -14,6 +15,9 @@ export default function Layout({
       <Navbar/>
     </header>
     <main>{children}</main>
+      <Footer/>
+
+    
     </div>
     </body>
     </html>
