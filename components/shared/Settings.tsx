@@ -5,8 +5,8 @@ export default function Settings() {
     const [name,setName]=useState();
     const [email,setEmail]=useState();
 
-    const handleNameChange=(e)=>{setName(e.target.value)};
-    const handleEmailChange=(e)=>{setEmail(e.target.value)};
+    const handleNameChange=(e:any)=>{setName(e.target.value)};
+    const handleEmailChange=(e:any)=>{setEmail(e.target.value)};
   return (
     <div className='w-1/2 mx-auto shadow-md rounded-lg bg-white p-6 mt-10'>
         <div className='w-full my-5'>
